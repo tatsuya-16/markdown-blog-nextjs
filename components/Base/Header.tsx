@@ -11,7 +11,7 @@ const Header: React.FC = () => {
                 <Link href="/about" passHref>
                     <span className="text-white no-underline cursor-pointer">About</span>
                 </Link>
-                <Link href="/blog" passHref>
+                <Link href="/blogs" passHref>
                     <span className="text-white no-underline cursor-pointer">Blog</span>
                 </Link>
             </nav>

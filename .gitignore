@@ -42,3 +42,6 @@ next-env.d.ts
 
 # テスト用のファイルを無視する
 test/
+
+# ローカルの写真ファイルを無視する
+public/pictures/

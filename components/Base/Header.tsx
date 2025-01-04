@@ -1,10 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+// import { AvatarImage } from "@/components/ui/avatar"
+// import me from "../../public/pictures/me.jpeg";
 
 const Header: React.FC = () => {
     return (
-        <header className="p-4 bg-gray-800 text-white">
-            <nav className="flex justify-around">
+        <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b border-gray-200 dark:border-gray-800">
+            {/* <nav className="flex justify-around">
                 <Link href="/" passHref>
                     <span className="text-white no-underline cursor-pointer">Home</span>
                 </Link>
@@ -13,6 +16,24 @@ const Header: React.FC = () => {
                 </Link>
                 <Link href="/blogs" passHref>
                     <span className="text-white no-underline cursor-pointer">Blog</span>
+                </Link>
+            </nav> */}
+            <Link className="flex items-center justify-center" href="/">
+                <Avatar>
+                    {/* <AvatarImage src={me} /> */}
+                    <AvatarFallback>TA</AvatarFallback>
+                </Avatar>
+                <span className="ml-2 text-lg font-bold">Tatsuya Abe</span>
+            </Link>
+            <nav className="flex items-center gap-4 sm:gap-6">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
+                    About
+                </Link>
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="#skills">
+                    Skills
+                </Link>
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/blogs">
+                    Blogs
                 </Link>
             </nav>
         </header>

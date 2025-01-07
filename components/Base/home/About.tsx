@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
-import me from '../../../public/pictures/me.jpeg';
 import { Github, Mail} from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image";
@@ -58,15 +57,15 @@ const About = () => {
                   </Link>
                 </div>
               </div>
-              <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
+                <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
                 <Image
-                  src={me}
+                  src={process.env.NEXT_PUBLIC_PROFILE_PICTURE_URL || '/default-profile-picture.jpg'}
                   alt="Tatsuya Abe"
                   layout="fill"
                   objectFit="cover"
                   className="rounded-full"
                 />
-              </div>
+                </div>
             </div>
           </div>
         </section>

@@ -7,28 +7,25 @@ import {
     CardTitle,
     CardFooter,
   } from "@/components/ui/card"
-import { Post } from "../../../app/interfaces/post"
+import { Blog } from "../../../app/interfaces/blog"
 import Link from 'next/link';
 // import DateFormatter from './date-formatter';
 
 
-type PostCardProps = {
-    postData: Post;
+type BlogCardProps = {
+    blogData: Blog;
 };
 
-const PostCard = async ({ postData }: PostCardProps) => { 
+const BlogCard = async ({ blogData }: BlogCardProps) => { 
   return (
     <Card>
-        <Link href={`/blogs/${postData.slug}`}>
+        <Link href={`/blogs/${blogData.slug}`}>
             <CardHeader>
-            <CardTitle>{postData.title}</CardTitle>
+            <CardTitle>{blogData.title}</CardTitle>
             <CardDescription>{new Date().toLocaleDateString()}</CardDescription>
             </CardHeader>
             <CardContent>
-            <p>興味深いブログ記事の短い説明がここに入ります。</p>
-            {/* <Button className="mt-4" variant="link">
-                続きを読む
-            </Button> */}
+            <p>{blogData.abstract}</p>
             </CardContent>
             <CardFooter>
                 <CardDescription>
@@ -40,4 +37,4 @@ const PostCard = async ({ postData }: PostCardProps) => {
   )
 }
 
-export default PostCard;
+export default BlogCard;

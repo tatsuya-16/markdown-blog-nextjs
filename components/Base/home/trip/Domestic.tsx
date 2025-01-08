@@ -3,29 +3,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { Photo } from "../../../../app/interfaces/photo"
-// import b from '../../../../public/pictures/kokura.jpg'
-// import a from '../../../../public/pictures/gozaisho.jpg'
-// import c from '../../../../public/pictures/sapporo.jpg'
-// import d from '../../../../public/pictures/fuji.jpg'
-// import e from '../../../../public/pictures/kamikochi.jpg'
-// import f from '../../../../public/pictures/enosima.jpg'
-// import g from '../../../../public/pictures/io.jpg'
-// import { Card, CardFooter } from '@/components/ui/card'
-
-// const photos = [
-//     { src: b, alt: 'Kokura, Fukuoka' },
-//     { src: a, alt: 'Mt. Gozaisho, Mie' },
-//     { src: c, alt: 'Sapporo, Hokkaido' },
-//     { src: d, alt: 'Mt. Fuji, Yamanashi' },
-//     { src: e, alt: 'Kamikochi, Gifu' },
-//     { src: f, alt: 'Enoshima, Kanagawa' },
-//     { src: g, alt: 'Mt. Io, Toyama' },
-//     // { src: '/images/newyork.jpg', alt: 'ニューヨークの街並み' },
-//     // { src: '/images/tokyo.jpg', alt: '東京の夜景' },
-//     // { src: '/images/london.jpg', alt: 'ロンドンの観光地' },
-//     // { src: '/images/rome.jpg', alt: 'ローマの遺跡' },
-//     // { src: '/images/sydney.jpg', alt: 'シドニーのオペラハウス' },
-// ]
 
 async function fetchDomesticPhotos() {
     const response = await fetch("http://localhost:3000/api/travelPhotosDometic", {
@@ -69,10 +46,8 @@ export default function Domestic() {
         return () => cancelAnimationFrame(animationFrameId);
     }, [isHovered]);
 
-    console.log(allphotos);
-
     return (
-        <section id="domestic" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900 px-12">
+        <section id="domestic" className="w-full py-12 md:py-18 lg:py-24 bg-gray-100 dark:bg-gray-900 px-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">Where I&apos;ve ever visited (Domestic)</h2>
             <div
                 className="relative w-full overflow-hidden"

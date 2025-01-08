@@ -3,7 +3,9 @@ import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
 
-const postsDirectory = join(process.cwd(), "test");
+// const postsDirectory = join(process.cwd(), "test");
+const postsDirectory = process.cwd() + '/test'; // 現在の作業ディレクトリを基準に設定
+
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);

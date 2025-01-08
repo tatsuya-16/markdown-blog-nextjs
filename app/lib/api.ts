@@ -4,7 +4,10 @@ import matter from "gray-matter";
 import { join } from "path";
 
 // const postsDirectory = join(process.cwd(), "test");
-const postsDirectory = process.cwd() + '/test'; // 現在の作業ディレクトリを基準に設定
+// const postsDirectory = process.cwd() + '/test'; // 現在の作業ディレクトリを基準に設定
+const postsDirectory = process.env.NEXT_PUBLIC_API_URL
+  ? join(process.env.NEXT_PUBLIC_API_URL, "test")
+  : process.cwd() + '/test';
 
 
 export function getPostSlugs() {

@@ -7,7 +7,8 @@ const Header: React.FC = () => {
         <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b border-gray-200 dark:border-gray-800">
             <Link className="flex items-center justify-center" href="/">
                 <Avatar>
-                    <AvatarImage src={process.env.NEXT_PUBLIC_PROFILE_PICTURE_URL} alt="Tatsuya Abe" />
+                    {/* <AvatarImage src={process.env.NEXT_PUBLIC_PROFILE_PICTURE_URL} alt="Tatsuya Abe" /> */}
+                    <AvatarImage src="https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/icon/me.jpeg" alt="Tatsuya Abe" />
                     <AvatarFallback>TA</AvatarFallback>
                 </Avatar>
                 <span className="ml-2 text-lg font-bold">Tatsuya Abe</span>

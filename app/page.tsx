@@ -2,11 +2,40 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 // import Link from "next/link"
 import Skills from "../components/Base/home/Skills"
-import Overseas from "../components/Base/home/trip/Overseas"
-import Domestic from "@/components/Base/home/trip/Domestic"
 import About from "@/components/Base/home/About"
+import TravelPhoto from "@/components/Base/home/TravelPhoto"
+import { headers } from 'next/headers';
+import { Photo } from './interfaces/photo';
 
-export default function Home() {
+// interface Photo {
+//   photoData: Photo[];
+// }
+
+// interface Photo {
+//   photoData: Photo[];
+// }
+
+async function fetchDomesticPhotos(host: string) {
+  const response = await fetch(`${process.env.API_PREFIX}${host}/api/travelPhotosDometic`, {
+      cache: "no-cache",
+  });
+
+  return response.json();
+}
+
+async function fetchOverseasPhotos(host: string) {
+  const response = await fetch(`${process.env.API_PREFIX}${host}/api/travelPhotosOverseas`, {
+      cache: "no-cache",
+  });
+
+  return response.json();
+}
+
+export default async function Home() {
+  const host = (await headers()).get('host');
+  const domesticPhotos: Photo[] = await fetchDomesticPhotos(host!);
+  const overseasPhotos: Photo[] = await fetchOverseasPhotos(host!);
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
       <main className="flex-1">
@@ -33,8 +62,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Overseas />
-        <Domestic />
+        <TravelPhoto photoData={overseasPhotos} title="Overseas"/>
+        <TravelPhoto photoData={domesticPhotos} title="Domestic"/>
       </main>
     </div>
   );

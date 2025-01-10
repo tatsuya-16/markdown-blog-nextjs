@@ -2,29 +2,32 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { Photo } from "../../../../app/interfaces/photo"
+import { Photo } from "../../../app/interfaces/photo"
+// import { headers } from 'next/headers';
 
-async function fetchDomesticPhotos() {
-    const response = await fetch("http://localhost:3000/api/travelPhotosDometic", {
-        cache: "no-cache",
-    });
+// async function fetchDomesticPhotos(host: string) {
+//     const response = await fetch(`${process.env.API_PREFIX}${host}api/travelPhotosDometic`, {
+//         cache: "no-cache",
+//     });
 
-    return response.json();
-}
+//     return response.json();
+// }
 
-export default function Domestic() {
-    const [allphotos, setAllPhotos] = useState([]);
+export default function Domestic({ photoData, title }: { photoData: Photo[]; title: string; }) {
+
+    // const [allphotos, setAllPhotos] = useState([]);
     const scrollRef = useRef<HTMLDivElement>(null);
     const [isHovered, setIsHovered] = useState(false);
 
-    useEffect(() => {
-        async function getPhotos() {
-            const photos = await fetchDomesticPhotos();
-            setAllPhotos(photos);
-            console.log(photos);
-        }
-        getPhotos();
-    }, []);
+    // useEffect(() => {
+    //     async function getPhotos() {
+    //         const host = (await headers()).get('host');
+    //         const photos = await fetchDomesticPhotos(host!);
+    //         // setAllPhotos(photos);
+    //         console.log(photos);
+    //     }
+    //     getPhotos();
+    // }, []);
 
     useEffect(() => {
         const scrollContainer = scrollRef.current;
@@ -48,7 +51,7 @@ export default function Domestic() {
 
     return (
         <section id="domestic" className="w-full py-12 md:py-18 lg:py-24 bg-gray-100 dark:bg-gray-900 px-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">Where I&apos;ve ever visited (Domestic)</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">Where I&apos;ve ever visited ({title})</h2>
             <div
                 className="relative w-full overflow-hidden"
                 onMouseEnter={() => setIsHovered(true)}
@@ -63,7 +66,7 @@ export default function Domestic() {
                         scrollbarWidth: 'none',
                     }}
                 >
-                    {[...allphotos, ...allphotos].map((photoData: Photo, index) => (
+                    {[...photoData, ...photoData].map((photoData: Photo, index) => (
                         <div key={index} className="flex-shrink-0 w-72 h-48 m-2 relative group">
                             <Image
                                 src={photoData.url}

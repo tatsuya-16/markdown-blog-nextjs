@@ -16,6 +16,7 @@ import { Photo } from './interfaces/photo';
 // }
 
 async function fetchDomesticPhotos(host: string) {
+console.log(`${process.env.API_PREFIX}${host}/api/travelPhotosDometic`)
   const response = await fetch(`${process.env.API_PREFIX}${host}/api/travelPhotosDometic`, {
       cache: "no-cache",
   });

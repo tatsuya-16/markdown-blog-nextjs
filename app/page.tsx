@@ -7,16 +7,7 @@ import TravelPhoto from "@/components/Base/home/TravelPhoto"
 import { headers } from 'next/headers';
 import { Photo } from './interfaces/photo';
 
-// interface Photo {
-//   photoData: Photo[];
-// }
-
-// interface Photo {
-//   photoData: Photo[];
-// }
-
 async function fetchDomesticPhotos(host: string) {
-console.log(`${process.env.API_PREFIX}${host}/api/travelPhotosDometic`)
   const response = await fetch(`${process.env.API_PREFIX}${host}/api/travelPhotosDometic`, {
       cache: "no-cache",
   });

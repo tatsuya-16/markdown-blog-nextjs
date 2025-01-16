@@ -8,7 +8,7 @@ tags:
   - 英語発音
 author: Tatsuya Abe
 abstract: 英語の発音上達に向けて意識していることやTipsをまとめた．
-date: '2022-07-13'
+date: '2024/12/20'
 
 ---
 ## はじめに

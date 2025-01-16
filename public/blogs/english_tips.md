@@ -1,5 +1,5 @@
 ---
-title: 英語の発音改善の基礎
+title: 英語の発音改善のためのTips
 slug: english_tips
 tags:
   - 英語
@@ -9,7 +9,7 @@ tags:
 author: Tatsuya Abe
 abstract: 英語の発音上達に向けて意識していることやTipsをまとめた．
 date: '2024/12/20'
-
+image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail/english_tips.jpg?t=2025-01-16T14%3A07%3A37.236Z
 ---
 ## はじめに
 ITエンジニアおよびアカデミアにとって，英語は切っても切り離せないものです．

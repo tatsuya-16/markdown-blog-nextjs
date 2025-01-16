@@ -5,4 +5,6 @@ export type Blog = {
   author: string;
   abstract: string;
   content: string;
+  tags: string[];
+  image: string;
 };

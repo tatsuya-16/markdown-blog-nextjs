@@ -4,6 +4,8 @@ import { Github, Mail} from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image";
 
+const NEXT_PUBLIC_PROFILE_PICTURE_URL = process.env.NEXT_PUBLIC_PROFILE_PICTURE_URL as string;
+
 const About = () => {
   return (
     <section id="about" className="w-full py-12 md:py-20 lg:py-24 xl:py-42">
@@ -59,7 +61,7 @@ const About = () => {
               </div>
                 <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
                 <Image
-                  src={process.env.NEXT_PUBLIC_PROFILE_PICTURE_URL || '/default-profile-picture.jpg'}
+                  src={NEXT_PUBLIC_PROFILE_PICTURE_URL}
                   alt="Tatsuya Abe"
                   layout="fill"
                   objectFit="cover"

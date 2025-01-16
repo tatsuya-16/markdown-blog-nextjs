@@ -1,4 +1,4 @@
-import { Post } from "../interfaces/post";
+import { Blog } from "../interfaces/blog";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
@@ -23,10 +23,10 @@ export function getPostBySlug(slug: string) {
   const { data, content } = matter(fileContents);
   console.log(data);
 
-  return { ...data, slug: realSlug, content } as Post;
+  return { ...data, slug: realSlug, content } as Blog;
 }
 
-export function getAllPosts(): Post[] {
+export function getAllPosts(): Blog[] {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))

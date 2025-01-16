@@ -22,7 +22,7 @@ const BlogCard = async ({ blogData }: BlogCardProps) => {
         <Link href={`/blogs/${blogData.slug}`}>
             <CardHeader>
             <CardTitle>{blogData.title}</CardTitle>
-            <CardDescription>{new Date().toLocaleDateString()}</CardDescription>
+            <CardDescription>{blogData.date}</CardDescription>
             </CardHeader>
             <CardContent>
             <p>{blogData.abstract}</p>

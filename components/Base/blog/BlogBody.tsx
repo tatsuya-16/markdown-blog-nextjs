@@ -4,7 +4,7 @@ type Props = {
   content: string;
 };
 
-export function PostBody({ content }: Props) {
+export function BlogBody({ content }: Props) {
   return (
     <div className="max-w-3xl mx-auto">
       <div

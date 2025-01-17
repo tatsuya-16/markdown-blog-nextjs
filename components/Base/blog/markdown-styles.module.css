@@ -3,7 +3,6 @@
 }
   
 .markdown p,
-.markdown ol,
 .markdown blockquote {
   @apply my-6;
 }
@@ -28,3 +27,9 @@
   list-style: disc;
   margin-left: 20px;
 }
+
+.markdown ol {
+  list-style: decimal;
+  margin-left: 20px;
+}
+

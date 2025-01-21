@@ -1,5 +1,5 @@
 ---
-title: FOMO (Faster Object, More Object) について
+title: FOMO (Faster Objects, More Objects) について
 slug: ml_fomo
 tags:
   - 機械学習
@@ -7,12 +7,12 @@ tags:
   - 物体検出
   - IoT
 author: Tatsuya Abe
-abstract: FOMO (Faster Object, More Object) アルゴリズムについてまとめる．
+abstract: FOMO (Faster Objects, More Objects) アルゴリズムについてまとめる．
 date: '2024/11/12'
 image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail/edge_impulse.svg
 ---
 ## はじめに
-FOMO (Faster Object, More Object)[^1] という機械学習アルゴリズムについてまとめる．
+FOMO (Faster Objects, More Objects)[^1] という機械学習アルゴリズムについてまとめる．
 [^1]:FOMO: Object detection for constrained devices, https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/fomo-object-detection-for-constrained-devices
 
 ## FOMOとは

@@ -6,6 +6,12 @@ import About from "@/components/Base/home/About"
 import TravelPhoto from "@/components/Base/home/TravelPhoto"
 import { headers } from 'next/headers';
 import { Photo } from './interfaces/photo';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tatsuya Abe's website (阿部竜弥の個人サイトおよびブログ)",
+  description: "Tatsuya Abe's personal website and blog. (阿部竜弥の個人サイトおよびブログです。)",
+};
 
 async function fetchDomesticPhotos(host: string) {
   const response = await fetch(`${process.env.API_PREFIX}${host}/api/travelPhotosDometic`, {

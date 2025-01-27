@@ -7,6 +7,6 @@ tags:
 author: Tatsuya Abe
 abstract: AI code editor Cursorを使ってみる
 date: '2025/1/26'
-image: https://freeappsai.com/wp-content/uploads/2024/04/Cursor-1.png
+image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail/cursor.png?t=2025-01-27T19%3A35%3A11.496Z
 ---
 要執筆

@@ -8,7 +8,7 @@ tags:
 author: Tatsuya Abe
 abstract: PyQt5でGUIアプリを作る
 date: '2025/1/31'
-image: https://freeappsai.com/wp-content/uploads/2024/04/Cursor-1.png
+image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//PyQt.png
 ---
 ## 概要
 PyQtは，PythonでGUIアプリを作るためのライブラリで，QtのPythonバインディング (QtというC++のクロスプラットフォームフレームワークをPythonで使えるようにしたもの) である．

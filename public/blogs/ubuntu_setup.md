@@ -7,7 +7,7 @@ tags:
 author: Tatsuya Abe
 abstract: ubuntuのセットアップ
 date: '2025/2/11'
-image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//ubuntu.png
+image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//ubuntu.svg
 ---
 ubuntu バージョン: 24.04
 
@@ -18,7 +18,7 @@ sudo apt update
 sudo apt install ibus-mozc
 sudo reboot
 ```
-2. 再起動後，Settings -> Keyboard -> Input Sources からJapanese(Mozc)追加
+2. 再起動後，Settings -> Keyboard -> Input Sources からJapanese(Mozc)を追加
 
 ## Google Chromeのインストール
 1. [Google Chrome公式サイト](https://www.google.com/intl/ja_jp/chrome/)から.debファイルをダウンロード

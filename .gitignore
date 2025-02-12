@@ -45,3 +45,5 @@ test/
 
 # ローカルの写真ファイルを無視する
 public/pictures/
+
+components/private/

@@ -1,18 +1,18 @@
 ---
-title: Next.jsアプリをubuntuサーバにデプロイ
-slug: ubuntu_nextjs
+title: Next.jsアプリをUbuntuサーバにデプロイ
+slug: Ubuntu_nextjs
 tags:
-  - ubuntu
+  - Ubuntu
   - Next.js
   - デプロイ
 author: Tatsuya Abe
-abstract: Next.jsアプリをubuntuサーバにデプロイする．
+abstract: Next.jsアプリをUbuntuサーバにデプロイする．
 date: '2025/2/12'
 image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//nextjs.svg
 ---
 
 ### 前提
-- ubuntu バージョン: 24.04
+- Ubuntu バージョン: 24.04
 - お名前.comでドメイン取得済み
 
 ## npm，node.js，nginxのインストール
@@ -89,7 +89,7 @@ pm2 startup
 pm2 list
 ```
 
-## ubuntuサーバのグローバルIPアドレスを確認
+## UbuntuサーバのグローバルIPアドレスを確認
 ```bash
 curl ifconfig.me
 ```
@@ -109,7 +109,7 @@ curl ifconfig.me
    - ホスト名: 任意
    - タイプ： A
    - TTL: 任意 (初期値: 3600)
-   - VALUE: ubuntuサーバのグローバルIPアドレス
+   - VALUE: UbuntuサーバのグローバルIPアドレス
 5. 追加 -> 確認画面へ進む -> 設定する
 
 ## Let's EncryptでSSL設定 （HTTPS化）

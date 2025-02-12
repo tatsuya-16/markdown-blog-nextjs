@@ -1,15 +1,15 @@
 ---
-title: ubuntuのセットアップ
-slug: ubuntu_setup
+title: Ubuntuのセットアップ
+slug: Ubuntu_setup
 tags:
-  - ubuntu
+  - Ubuntu
   - セットアップ
 author: Tatsuya Abe
-abstract: ubuntuのセットアップ
+abstract: Ubuntuのセットアップ
 date: '2025/2/11'
 image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//ubuntu.svg
 ---
-ubuntu バージョン: 24.04
+Ubuntu バージョン: 24.04
 
 ## 日本語入力の設定
 1. ターミナルを開き，以下のコマンドを実行

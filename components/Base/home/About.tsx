@@ -1,6 +1,4 @@
 import React from 'react'
-import { Button } from "@/components/ui/button"
-import { Github, Mail} from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image";
 
@@ -44,18 +42,20 @@ const About = () => {
                 <h3 className="text-m tracking-tighter sm:text-l xl:text-xl/none text-gray-700">
                     - Spanish (Beginner)
                 </h3>
-                <div className="flex gap-4">
-                  <Link href="https://github.com/tatsuya-16" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="icon">
-                      <Github className="h-5 w-5" />
-                    </Button>
-                  </Link>
-                  <Link href="ta16tech@gmail.com">
-                    <Button variant="outline" size="icon">
-                      <Mail className="h-5 w-5" />
-                    </Button>
-                  </Link>
-                </div>
+                <h2 className="text-xl font-bold tracking-tighter sm:text-2xl xl:text-3xl/none">
+                  Contact
+                </h2>
+                <h3 className="text-m tracking-tighter sm:text-l xl:text-xl/none text-gray-700">
+                  ta16tech@gmail.com
+                </h3>
+                <h2 className="text-xl font-bold tracking-tighter sm:text-2xl xl:text-3xl/none">
+                  Github
+                </h2>
+                <h3 className="text-m tracking-tighter sm:text-l xl:text-xl/none text-gray-700">
+                    <Link href="https://github.com/tatsuya-16">
+                    <span className="hover:underline">tatsuya-16</span>
+                    </Link>
+                </h3>
               </div>
                 <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
                 <Image

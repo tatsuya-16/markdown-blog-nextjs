@@ -112,6 +112,9 @@ curl ifconfig.me
    - VALUE: UbuntuサーバのグローバルIPアドレス
 5. 追加 -> 確認画面へ進む -> 設定する
 
+http://[ドメイン名]で接続を確認．
+アクセスできない場合，ファイアウォールやルータのセキュリティ，ポート変換の設定を確認．
+
 ## Let's EncryptでSSL設定 （HTTPS化）
 Let's Encrypt: 証明書認証局
 参考: [無料SSL証明書のLet’s Encryptとは？](https://ssl.sakura.ad.jp/column/letsencrypt/)
@@ -124,7 +127,7 @@ sudo apt install -y certbot python3-certbot-nginx
 ```bash
 sudo certbot --nginx -d [ドメイン名]
 ```
-Failedの場合は，ファイアウォールやルータの設定を確認．
+Failedの場合は，ファイアウォールやルータのセキュリティ設定を確認．
 
 3. SSL証明書の自動更新の設定
 ```bash

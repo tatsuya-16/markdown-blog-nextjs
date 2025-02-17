@@ -67,6 +67,18 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
+### nginxの起動，再起動に失敗した場合
+```bash
+sudo nginx -t
+```
+test failed場合，設定ファイル (.conf)に誤りがある．
+
+```bash
+sudo systemctl status nginx.service
+```
+エラーログに，still could not bind() とある場合，他のプロセスがポートを占有している．
+
+
 ## PM2のインストール，アプリの起動
 PM2: Node.js用のプロセスマネージャ
 参考: [OpenStandia PM2](https://openstandia.jp/oss_info/pm2/)

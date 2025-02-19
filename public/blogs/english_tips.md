@@ -49,19 +49,19 @@ ITエンジニアおよびアカデミアにとって，英語は切っても切
 
 #### 2. 息を出し続ける（音を出し続ける）
 喉の開閉で音節を区切らない．
-[参考動画](https://youtu.be/cdQN0xTR5aY?si=pMtFcTXsNMGs2gfY)
+https://youtu.be/cdQN0xTR5aY?si=pMtFcTXsNMGs2gfY
 
 #### 3. 子音は口先でやや適当に発音
 リスニング力の低い我々が，自分が聞き取れる発音で話すとそれは当然ジャパニーズイングリッシュである．
-[参考動画](https://youtube.com/shorts/W4ZKex1y0gI?si=vmrxP4n6tDDOrwpY)
+https://youtube.com/shorts/W4ZKex1y0gI?si=vmrxP4n6tDDOrwpY
 
 #### 4. 英語に「ー」（伸ばし棒）はない
 3月を意味する"March"は「マーチ」ではなく，「マァチ」．
-[参考動画](https://youtu.be/82sNS3dFRNc?si=yvzI2iBMZBwg0ZPt)
+https://youtu.be/82sNS3dFRNc?si=yvzI2iBMZBwg0ZPt
 
 #### 5. 英語に「っ」（促音）はない
 犬を意味する"dog"は「ドッグ」ではなく，「ドォグ」．
-[参考動画](https://youtu.be/tYJZJUmTdgA?si=a5-zozuAv9BMTKhV)
+https://youtu.be/tYJZJUmTdgA?si=a5-zozuAv9BMTKhV
 
 #### 6. 音節（シラブル）の数を意識
 物体を意味する"object"は「オ・ブ・ジェ・ク・ト」の5音ではなく，「オブ・ジェクト」の2音です．
@@ -69,7 +69,8 @@ ITエンジニアおよびアカデミアにとって，英語は切っても切
 以上の発声・発音Tipsに加え，各アルファベットの正確な発音を身につけることが必要です．
 そのためには，**フォニックス**です．
 フォニックスとは，アルファベットと発音の関係性を学ぶ音声学習法です．
-[この動画](https://youtu.be/eqzUPQ1EgpI?si=GqoD2djheEzrK47H)を見ながら毎日練習しましょう．
+下記リンクの動画を見ながら毎日練習しましょう．
+https://youtu.be/eqzUPQ1EgpI?si=GqoD2djheEzrK47H
 1週間も経てば，上達を実感できる人も少なくないでしょう．
 
 根本的な発声，発音の違いを理解し，フォニックスで各アルファベットの発音を習得したら，次は文章として話す練習です．

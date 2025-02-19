@@ -1,13 +1,12 @@
 import { notFound } from "next/navigation";
 import { getPostBySlug } from "../../lib/api";
-import markdownToHtml from 'zenn-markdown-html';
+import markdownToHtml from "zenn-markdown-html";
 import { BlogBody } from "@/components/Base/blog/BlogBody";
 import { BlogHeader } from "../../../components/Base/blog/BlogHeader";
+import "zenn-content-css";
 
 type Params = {
-  params: Promise<{
-    slug: string;
-  }>;
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata(props: Params) {
@@ -20,11 +19,11 @@ export async function generateMetadata(props: Params) {
     openGraph: {
       title: blog.title,
       description: blog.abstract,
-      type: 'article',
+      type: "article",
       images: [blog.image],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: blog.title,
       description: blog.abstract,
       images: [blog.image],
@@ -40,17 +39,12 @@ export default async function Post(props: Params) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content);
+  const content = markdownToHtml(post.content);
 
   return (
     <main>
-        <BlogHeader
-                title={post.title}
-                date={post.date}
-                author={post.author}
-            />
-        <BlogBody content={content}/>
+      <BlogHeader title={post.title} date={post.date} author={post.author} />
+        <BlogBody content={content} />
     </main>
   );
 }
-

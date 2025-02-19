@@ -10,15 +10,15 @@ abstract: PyQt5でGUIアプリを作る
 date: '2025/1/31'
 image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//PyQt.png
 ---
-## 概要
+# 概要
 PyQtは，PythonでGUIアプリを作るためのライブラリで，QtのPythonバインディング (QtというC++のクロスプラットフォームフレームワークをPythonで使えるようにしたもの) である．
 イギリスのRiverbank Computing社[^1]が開発している．
 商用利用にはライセンスが必要である．
 
-## サンプルアプリ
+# サンプルアプリ
 PyQt5[^2]を用いて簡単なGUIアプリを作成した ([githubリポジトリ](https://github.com/tatsuya-16/valentine-date-invitation/tree/main))．
 
-### インストール
+## インストール
 ``pip install PyQt5``
 
 

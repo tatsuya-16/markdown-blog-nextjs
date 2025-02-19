@@ -11,16 +11,16 @@ date: '2025/2/12'
 image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//nextjs.svg
 ---
 
-### 前提
+## 前提
 - Ubuntu バージョン: 24.04
 - お名前.comでドメイン取得済み
 
-## npm，node.js，nginxのインストール
+# npm，node.js，nginxのインストール
 ```bash
 sudo apt install -y npm nodejs nginx
 ```
 
-## Next.jsアプリのGitリポジトリのクローン，ビルド
+# Next.jsアプリのGitリポジトリのクローン，ビルド
 ```bash
 git clone [リポジトリURL]
 cd [クローンしたリポジトリのディレクトリ]
@@ -31,7 +31,7 @@ npm start
 .env等の.gitignoreしたファイルを作成するのを忘れないように．
 エラーが発生した場合，内容をサーバ側から閲覧できないため，ローカルで確認．
 
-## nginxの設定
+# nginxの設定
 [nginx](https://nginx.org/en/): webサーバソフトウェア
 参考: [初心者でも10分で分かるnginxの役割と使い方](https://qiita.com/riita10069/items/5d36dfeb756e3b6c4978)
 1. 設定ファイルの作成
@@ -67,7 +67,7 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-### nginxの起動，再起動に失敗した場合
+## nginxの起動，再起動に失敗した場合
 ```bash
 sudo nginx -t
 ```
@@ -79,7 +79,7 @@ sudo systemctl status nginx.service
 エラーログに，still could not bind() とある場合，他のプロセスがポートを占有している．
 
 
-## PM2のインストール，アプリの起動
+# PM2のインストール，アプリの起動
 PM2: Node.js用のプロセスマネージャ
 参考: [OpenStandia PM2](https://openstandia.jp/oss_info/pm2/)
 
@@ -101,18 +101,18 @@ pm2 startup
 pm2 list
 ```
 
-## UbuntuサーバのグローバルIPアドレスを確認
+# UbuntuサーバのグローバルIPアドレスを確認
 ```bash
 curl ifconfig.me
 ```
-## ドメインのネームサーバ，DNSの設定
+# ドメインのネームサーバ，DNSの設定
 以下，お名前.comの場合，
 ### ネームサーバの設定
 1. お名前.com NAVIにログイン
 2. ネームサーバー -> ネームサーバー設定
 3. 対象ドメインがお名前.comのネームサーバーを使う設定になっているか確認
 
-### DNS設定
+# DNS設定
 
 1. お名前.com NAVIにログイン
 2. ネームサーバー -> ドメインDNS設定
@@ -127,7 +127,7 @@ curl ifconfig.me
 http://[ドメイン名]で接続を確認．
 アクセスできない場合，ファイアウォールやルータのセキュリティ，ポート変換の設定を確認．
 
-## Let's EncryptでSSL設定 （HTTPS化）
+# Let's EncryptでSSL設定 （HTTPS化）
 Let's Encrypt: 証明書認証局
 参考: [無料SSL証明書のLet’s Encryptとは？](https://ssl.sakura.ad.jp/column/letsencrypt/)
 

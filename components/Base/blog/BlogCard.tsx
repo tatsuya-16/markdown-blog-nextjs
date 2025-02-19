@@ -18,7 +18,7 @@ type BlogCardProps = {
 const BlogCard = async ({ blogData }: BlogCardProps) => {
   return (
     <div>
-      <Card>
+      <Card style={{ boxShadow: 'none', border: 'none' }}>
         <Link href={`/blogs/${blogData.slug}`}>
           <div style={{ position: 'relative', width: '100%', height: '150px' }}>
             <Image

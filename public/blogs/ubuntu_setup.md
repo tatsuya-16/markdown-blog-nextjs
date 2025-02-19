@@ -11,7 +11,7 @@ image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThu
 ---
 Ubuntu バージョン: 24.04
 
-## 日本語入力の設定
+# 日本語入力の設定
 1. ターミナルを開き，以下のコマンドを実行
 ```bash
 sudo apt update
@@ -20,14 +20,14 @@ sudo reboot
 ```
 2. 再起動後，Settings -> Keyboard -> Input Sources からJapanese(Mozc)を追加
 
-## Google Chromeのインストール
+# Google Chromeのインストール
 1. [Google Chrome公式サイト](https://www.google.com/intl/ja_jp/chrome/)から.debファイルをダウンロード
 2. ターミナルを開き，以下のコマンドを実行
 ```bash
 sudo apt install ~/Downloads/google-chrome-stable_current_amd64.deb
 ```
 
-## Gitのインストール
+# Gitのインストール
 1. ターミナルを開き，以下のコマンドを実行
 ```bash
 sudo apt install git
@@ -38,7 +38,7 @@ git config --global user.name [Your Name]
 git config --global user.email [Your.email@example.com]
 ```
 
-## Visual Studio Codeのインストール
+# Visual Studio Codeのインストール
 1. [VSCode公式サイト](https://code.visualstudio.com/download)から.debファイルをダウンロード
 2. ターミナルを開き，以下のコマンドを実行
 ```bash

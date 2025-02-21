@@ -14,8 +14,12 @@ image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThu
 # 目標
 東京 (NRT) - メキシコシティ (MEX)直行便の特典航空券をマイルで取得したい．
 
+## 期間
+2025年2月から2026年3月の約1年間．
+
 ## 必要マイル数 (2025/2/20時点)
-以下，往復便に必要なマイル数．
+以下，往復便に必要なマイル数[^1]．
+[^1]: https://www.ana.co.jp/ja/jp/guide/amc/award/international/terms/
 
 | 対象クラス | ローシーズン (L) | レギュラーシーズン (R) | ハイシーズン (H)|
 | :--- | ---: | ---: | ---: |
@@ -50,7 +54,8 @@ image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThu
 (カード利用対象期間は，2025年2月16日（日）～2025年7月31日（木）の約5ヶ月間．)
 
 ## 3. 継続ボーナス
-学生カードは，1年継続で**1,000マイル**ゲット．
+学生カードは，1年継続で**1,000マイル**ゲット[^2]．
+[^2]: https://www.ana.co.jp/ja/jp/guide/amc/anacard/admission-and-continuation/
 
 # 計算
 上記の入会特典，カード基本利用ポイント，利用金額別キャンペーンポイント，継続ポイントを踏まえ，月当たりの利用金額ごとに1年で貯まるマイル数をグラフにした．

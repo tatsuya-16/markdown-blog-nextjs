@@ -15,7 +15,7 @@ type BlogCardProps = {
     blogData: Blog;
 };
 
-const BlogCard = async ({ blogData }: BlogCardProps) => {
+const BlogCard = ({ blogData }: BlogCardProps) => {
   return (
     <div>
       <Card style={{ boxShadow: 'none', border: 'none' }}>

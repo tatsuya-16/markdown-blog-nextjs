@@ -8,12 +8,13 @@ tags:
 author: Tatsuya Abe
 abstract: Next.jsとGemini APIを使って簡単なwebアプリを作ってみる．
 date: '2025/2/24'
-image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//ai_fundamental.jpeg
+image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThumbnail//Google_Gemini_logo.svg.png
 ---
 # はじめに
 GoogleのGemini APIを使ってみる．
 料金体系は[こちら](https://ai.google.dev/gemini-api/docs/pricing?hl=ja)．
 今回はNext.jsでwebアプリを実装してみる．
+Githubリポジトリ: https://github.com/tatsuya-16/gemini-api-test-nextjs
 
 # やってみる
 ## Next.jsのプロジェクトを作成

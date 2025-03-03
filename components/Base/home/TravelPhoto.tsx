@@ -21,7 +21,7 @@ export default function TravelPhoto({ photoData, title }: { photoData: Photo[]; 
   }, []);
   
   return (
-    <section id="travelPhoto" className="w-full py-12 md:py-18 lg:py-24 bg-gray-100 dark:bg-gray-900 px-12">
+    <section id="travelPhoto" className="w-full py-12 md:py-18 lg:py-24 bg-white dark:bg-gray-800 px-12">
     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
       Where I&apos;ve ever visited ({title})
     </h2>

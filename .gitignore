@@ -40,11 +40,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# テスト用のファイルを無視する
+# テスト用のファイル
 test/
 
-# ローカルの写真ファイルを無視する
+# ローカルの写真ファイル
 public/pictures/
 
+# プライベートフォルダ
 components/private/
 app/private/
+
+# cursor rule
+/.cursor

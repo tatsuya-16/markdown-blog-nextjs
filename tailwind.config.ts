@@ -55,7 +55,16 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+  		keyframes: {
+  			carousel: {
+  				'0%': { transform: 'translateX(0)' },
+  				'100%': { transform: 'translateX(-33.33%)' }
+  			},
+  		},
+  		animation: {
+  			'carousel': 'carousel 70s linear infinite',
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate")],

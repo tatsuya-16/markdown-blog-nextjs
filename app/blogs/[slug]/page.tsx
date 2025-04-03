@@ -3,6 +3,7 @@ import { getPostBySlug } from "../../lib/api";
 import markdownToHtml from "zenn-markdown-html";
 import { BlogBody } from "@/components/Base/blog/BlogBody";
 import { BlogHeader } from "../../../components/Base/blog/BlogHeader";
+import TableOfContents from "@/components/Base/blog/TableOfContents";
 import "zenn-content-css";
 
 type Params = {
@@ -42,9 +43,14 @@ export default async function Post(props: Params) {
   const content = markdownToHtml(post.content);
 
   return (
-    <main>
+    <div className="flex flex-col lg:flex-row">
+      <main className="flex-1">
       <BlogHeader title={post.title} date={post.date} author={post.author} />
-        <BlogBody content={content} />
-    </main>
+      <BlogBody content={content} />
+      </main>
+      <div className="lg:w-3/12 mt-4 lg:mt-0 lg:mr-4">
+        <TableOfContents /> {/* Tocコンポーネントを追加 */}
+      </div>
+    </div>
   );
 }

@@ -16,7 +16,7 @@ export function BlogBody({ content }: Props) {
   }, []);
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="blog max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="znc" dangerouslySetInnerHTML={{ __html: content }}/>
       <Button className="mt-8 mb-8">
             <Link href="/blogs">一覧に戻る</Link>

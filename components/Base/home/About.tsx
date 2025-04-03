@@ -56,6 +56,14 @@ const About = () => {
                     <span className="hover:underline">tatsuya-16</span>
                     </Link>
                 </h3>
+                <h2 className="text-xl font-bold tracking-tighter sm:text-2xl xl:text-3xl/none">
+                  LinkedIn
+                </h2>
+                <h3 className="text-m tracking-tighter sm:text-l xl:text-xl/none text-gray-700">
+                    <Link href="https://www.linkedin.com/in/tatsuya-abe-1b1b94354/">
+                    <span className="hover:underline">Tatsuya Abe</span>
+                    </Link>
+                </h3>
               </div>
                 <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
                 <Image

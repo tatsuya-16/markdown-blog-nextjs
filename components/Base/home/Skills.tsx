@@ -4,9 +4,10 @@ import { Laptop, Zap, Languages, Cpu } from 'lucide-react'
 
 const Skills = () => {
   return (
-    <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800">
+    <section id="skills" className="w-full py-6 md:py-12 lg:py-16 bg-white dark:bg-gray-800">
           <div className="container px-12 md:px-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">What I&apos;m studying</h2>
+            <h2 className="text-xl font-bold sm:text-2xl xl:text-4xl">What I&apos;m studying</h2>
+            <div className="h-1 w-32 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full my-6"></div>
             <div className="grid gap-6 lg:grid-cols-4 lg:gap-12">
               <Card>
                 <CardHeader>

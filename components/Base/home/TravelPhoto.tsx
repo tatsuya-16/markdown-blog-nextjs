@@ -3,10 +3,11 @@ import { Photo } from "../../../app/interfaces/photo"
 
 export default function TravelPhoto({ photoData, title }: { photoData: Photo[]; title: string }) {
   return (
-    <section id="travelPhoto" className="w-full py-12 md:py-18 lg:py-24 bg-white dark:bg-gray-800 px-12">
-      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
+    <section id="travelPhoto" className="w-full py-6 md:py-8 lg:py-12 bg-white dark:bg-gray-800 px-12">
+      <h2 className="text-xl font-bold sm:text-2xl xl:text-4xl">
         Where I&apos;ve ever visited ({title})
       </h2>
+      <div className="h-1 w-32 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full my-6"></div>
       <div className="relative w-full overflow-hidden">
         <div
           className="flex animate-carousel"

@@ -7,7 +7,7 @@ echo "Installing dependencies..."
 npm install
 
 echo "Building the project..."
-rpm run build
+npm run build
 
 echo "Restarting the application with PM2..."
 pm2 restart markdown-blog-nextjs

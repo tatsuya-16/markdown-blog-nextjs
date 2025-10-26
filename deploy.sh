@@ -1,7 +1,7 @@
 cd "$(dirname "$0")"
 
 echo "Deploying markdown-blog-nextjs..."
-git pull orgin main
+git pull origin main
 
 echo "Installing dependencies..."
 npm install

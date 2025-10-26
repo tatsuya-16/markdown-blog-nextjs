@@ -147,3 +147,8 @@ sudo systemctl enable certbot.timer
 ```
 
 最後に，https://[ドメイン名]にアクセスして接続を確認．
+
+# デプロイの自動化
+Webhookを使ってデプロイを自動化する．
+テスト
+ポート変換

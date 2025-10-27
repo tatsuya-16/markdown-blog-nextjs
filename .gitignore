@@ -52,3 +52,6 @@ app/private/
 
 # cursor rule
 /.cursor
+
+# 自動デプロイ用のスクリプト
+.deploy.sh

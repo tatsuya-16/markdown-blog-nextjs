@@ -58,7 +58,7 @@ server {
 ```bash
 sudo ln -s /etc/nginx/sites-available/[任意の名前] /etc/nginx/sites-enabled/
 ```
-4. 設定をテストし，"test is successful" を確認
+4. 設定をテストし，`test is successful` を確認
 ```bash
 sudo nginx -t
 ```
@@ -71,12 +71,12 @@ sudo systemctl restart nginx
 ```bash
 sudo nginx -t
 ```
-test failed場合，設定ファイル (.conf)に誤りがある．
+`test failed`場合，設定ファイル (.conf)に誤りがある．
 
 ```bash
 sudo systemctl status nginx.service
 ```
-エラーログに，still could not bind() とある場合，他のプロセスがポートを占有している．
+エラーログに，`still could not bind()` とある場合，他のプロセスがポートを占有している．
 
 
 # PM2のインストール，アプリの起動
@@ -150,5 +150,99 @@ sudo systemctl enable certbot.timer
 
 # デプロイの自動化
 Webhookを使ってデプロイを自動化する．
-テスト
-ポート変換
+
+## デプロイ用シェルスクリプトの作成
+```sh
+cd "$(dirname "$0")"
+
+echo "Deploying markdown-blog-nextjs..."
+git pull origin main
+
+echo "Installing dependencies..."
+npm install
+
+echo "Building the project..."
+npm run build
+
+echo "Restarting the application with PM2..."
+pm2 restart markdown-blog-nextjs
+```
+
+## Webhookリスナーの作成
+Githubからのリクエストを受け取るサーバを作成する．
+1. 必要なライブラリをインストール
+```
+npm install http github-webhook-handler
+```
+2. Webhookリスナーを作成
+```js
+const http = require('http');
+const { exec } = require('child_process');
+
+// GitHub Webhook ハンドラーをインポート
+const createHandler = require('github-webhook-handler');
+
+// GitHubで設定するシークレットキー
+const SECRET_KEY = 'your_very_secret_key'; 
+// Listenするポート (空きポート)
+const PORT = 7777; 
+// 実行するデプロイスクリプトの絶対パス
+const DEPLOY_SCRIPT_PATH = '/path/to/your/deploy.sh'; 
+
+const handler = createHandler({ path: '/webhook', secret: SECRET_KEY });
+
+http.createServer((req, res) => {
+  handler(req, res, (err) => {
+    res.statusCode = 404;
+    res.end('no such location');
+  });
+}).listen(PORT, () => {
+  console.log(`Webhook listener running on port ${PORT}`);
+});
+
+// エラー処理
+handler.on('error', (err) => {
+  console.error('Error:', err.message);
+});
+
+// push イベントの処理
+handler.on('push', (event) => {
+  console.log('Received a push event for %s to %s',
+    event.payload.repository.name,
+    event.payload.ref);
+
+  // 公開用ブランチへのプッシュかどうかを確認（例: main）
+  if (event.payload.ref === 'refs/heads/main') {
+    console.log('Push to main branch detected. Running deploy script...');
+
+    // デプロイスクリプトを実行
+    exec(DEPLOY_SCRIPT_PATH, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      console.error(`stderr: ${stderr}`);
+    });
+  }
+});
+```
+3. PM2で起動する（名前は任意）
+```bash
+pm2 start webhook-listener.js --name webhook-listener
+```
+
+## Githubの設定
+1. 該当リポジトリのSettings＞Webhooksに移動
+2. Add webhooksをクリック
+3. Payload URLに，webhookリスナーのURLを入力
+e.g., `http://YOUR_SERVER_IP_OR_DOMAIN:7777/webhook`
+4. Content typeを`application/json`に設定
+5. Secretに`webhook-listener.js`の`SECRET_KEY`に設定した文字列を設定
+6. SSL verificationを`Enable SSL verification`に設定
+7. Which events would you like to trigger this webhook?を`Just the push event`に設定
+8. Add webhookボタンをクリックして設定完了
+
+上記の手順を完了すると，該当ブランチにpushされた際に自動でデプロイが実行される．
+GithubのWebhook設定ページにてRecent Deliveriesで`200 OK`になっていれば成功．
+うまくいかない場合は，ファイアウォールやルータのポート変換ルールを確認．

@@ -18,7 +18,7 @@ Githubリポジトリ: https://github.com/tatsuya-16/gemini-api-test-nextjs
 
 # やってみる
 ## Next.jsのプロジェクトを作成
-```bash
+```sh
 npx create-next-app@latest
 
 ✔ What is your project named? … gemini-test
@@ -32,13 +32,13 @@ npx create-next-app@latest
 ```
 
 VScodeで作成したプロジェクトを開く
-```bash
+```sh
 code gemini-test
 ```
 
 ## Gemini APIライブラリをインストールする
 参考: [Gemini API のクイックスタート](https://ai.google.dev/gemini-api/docs/quickstart?hl=ja&_gl=1*1dnaogi*_up*MQ..*_ga*MjA2MTgyMzAzOS4xNzQwMzgyODU0*_ga_P1DBVKWT6V*MTc0MDM4Mjg1My4xLjAuMTc0MDM4Mjg1My4wLjAuNzIxODk3Njg3&lang=node)
-```bash
+```sh
 npm install @google/generative-ai
 ```
 
@@ -46,7 +46,7 @@ npm install @google/generative-ai
 [Google AI Studio](https://aistudio.google.com/app/apikey)でAPIキーを取得．
 
 プロジェクトのルートディレクトリに.env.localファイルを作成し，APIキーを記述．
-```bash:.env.local
+```sh:.env.local
 GEMINI_API_KEY=[取得したAPIキー]
 ```
 
@@ -110,7 +110,7 @@ export async function POST(request: Request) {
 
 ### UIを作る
 shadcnをインストール
-```bash
+```sh
 npx shadcn@latest init
 
 ✔ Preflight checks.
@@ -137,7 +137,7 @@ Success! Project initialization completed.
 You may now add components.
 ```
 Input，Button，Scroll Areaをインストール．
-```bash
+```sh
 npx shadcn@latest add button input scroll-area
 ```
 
@@ -194,7 +194,7 @@ export default function Home() {
 
 ### 動作確認
 開発サーバを起動
-```bash
+```sh
 npm run dev
 ```
 ローカルサーバ (通常，http://localhost:3000)にアクセス．

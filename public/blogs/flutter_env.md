@@ -1,5 +1,5 @@
 ---
-title: Flutterの開発環境構築
+title: Flutterの開発環境構築 for Mac
 slug: flutter_env
 tags:
   - Flutter
@@ -22,14 +22,14 @@ image: https://fsbezimxrqnvxjyhivvn.supabase.co/storage/v1/object/public/blogThu
 1. [Flutter](https://flutter-ko.dev/get-started/install/macos)のサイトから，SDKをダウンロード．
 2. zipファイルを解凍．
 3. Appleシリコンの場合，以下を実行．
-```zsh
+```sh
 sudo softwareupdate --install-rosetta --agree-to-license
 ```
 
 ## パスの設定
 1. ホームディレクトリの下にflutter_sdkディレクトリを作成し，その下に解凍したファイルを配置する．
 2. ターミナルで /flutter_sdk/flutter/bin まで移動し，pwdコマンドで絶対パスを取得してコピー．
-```zsh
+```sh
 % cd flutter_sdk
 flutter_sdk % ls
 flutter
@@ -48,31 +48,31 @@ bin % pwd
 ```
 以下，zshの場合，
 3. エディタで.zshrcを開く
-```zsh
+```sh
 open -e ~/.zshrc
 ```
 4. 以下を記述．$PATH: 以降はコピーしておいたパスをペースト．
-```zsh
+```sh
 # Flutter SDK path
 export PATH="$PATH:/Users/[user name]/flutter_sdk/flutter/bin"
 ```
 5. ターミナルで以下を実行し，変更を反映．
-```zsh
+```sh
 source ~/.zshrc
 ```
 6. 以下のコマンドで，パスが通っているか確認．
-```zsh
+```sh
 which flutter
 ```
 Flutterの実行ファイルのパスが帰ってこればOK．
 
 # Flutter環境の確認
 1. ターミナルで以下を実行．
-```zsh
+```sh
 flutter doctor
 ```
 筆者の場合，以下の実行結果となった．
-```zsh
+```sh
 Doctor summary (to see all details, run flutter doctor -v):
 [✓] Flutter (Channel stable, 3.29.2, on macOS 14.6.1 23G93 darwin-arm64, locale ja-JP)
 [!] Android toolchain - develop for Android devices (Android SDK version 35.0.1)
@@ -100,7 +100,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 発生した問題を下記手順で解決していく．
 ## Android SDK コマンドラインツールのインストール
 以下の解決手順．
-```zsh
+```sh
 ✗ cmdline-tools component is missing
 Run `path/to/sdkmanager --install "cmdline-tools;latest"`
 See https://developer.android.com/studio/command-line for more details.
@@ -110,19 +110,19 @@ See https://developer.android.com/studio/command-line for more details.
 
 ## Android SDK ライセンスの承認
 以下の解決手順．
-```zsh
+```sh
 ✗ Android license status unknown.
 Run `flutter doctor --android-licenses` to accept the SDK licenses.
 See https://flutter.dev/to/macos-android-setup for more details.
 ```
 1. ターミナルで以下を実行．何度か"y"を入力し，ライセンスを承認．
-```zsh
+```sh
 flutter doctor --android-licenses
 ```
 
 ## シミュレータのインストール
 以下の解決手順．
-```zsh
+```sh
 ✗ Unable to get list of installed Simulator runtimes.
 ```
 1. Xcodeを開く．
@@ -130,7 +130,7 @@ flutter doctor --android-licenses
 
 ## CocoaPodsのインストール
 以下の解決手順．
-```zsh
+```sh
 ✗ CocoaPods not installed.
     CocoaPods is a package manager for iOS or macOS platform code.
     Without CocoaPods, plugins will not work on iOS or macOS.
@@ -140,23 +140,23 @@ For installation instructions, see https://guides.cocoapods.org/using/getting-st
 CocoaPods: iOS開発向けのライブラリ管理ツール．
 
 1. 以下のコマンドを実行．
-```zsh
+```sh
 sudo gem install cocoapods
 ```
 全て Successfully installed の場合，成功．
 
 以下のようなエラーが発生する場合，Rubyのバージョンを上げる必要がある．
-```zsh
+```sh
 ... requires Ruby version >= 3.1.0. The current ruby version is 2.6.10.210.
 ```
 
 ### rbenvのインストール
 1. 以下のコマンドを実行．Homebrewが未インストールの場合は[こちら](https://brew.sh/ja/)．
-```zsh
+```sh
 brew install rbenv
 ```
 2. インストール可能なバージョンを確認．
-```zsh
+```sh
 rbenv install -l
 
 3.1.6
@@ -170,42 +170,42 @@ truffleruby-24.2.0
 truffleruby+graalvm-24.2.0
 ```
 3. 適切なバージョンをインストール．
-```zsh
+```sh
 rbenv install 3.4.2
 ```
 4. インストールしたバージョンをアクティブにする．
-```zsh
+```sh
 rbenv global 3.4.2
 ```
 5. バージョンを確認．
-```zsh
+```sh
 ruby -v
 ```
 インストールしたバージョンが反映されていればOK．
 
 #### 反映されていない場合，
 1. エディタで.zshrcを開く
-```zsh
+```sh
 open -e ~/.zshrc
 ```
 2. 以下を記述．
-```zsh
+```sh
 eval "$(rbenv init -)"
 ```
 3. ターミナルで以下を実行し，変更を反映．
-```zsh
+```sh
 source ~/.zshrc
 ```
 4. 再度バージョンを確認．
-```zsh
+```sh
 ruby -v
 ```
 5. バージョンが更新できているはず．ようやくcocoapodsをインストール．
-```zsh
+```sh
 sudo gem install cocoapods
 ```
 #### 再度確認．
-```zsh
+```sh
 flutter doctor
 
 Doctor summary (to see all details, run flutter doctor -v):

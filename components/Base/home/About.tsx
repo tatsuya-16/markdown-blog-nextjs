@@ -12,9 +12,9 @@ const About = () => {
           <div className="w-full md:w-3/5 space-y-8">
             {/* Name Section with Animation */}
             <div className="space-y-2 overflow-hidden">
-              <h1 className="text-xl font-bold sm:text-2xl xl:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 animate-fade-in">
+              {/* <h1 className="text-xl font-bold sm:text-2xl xl:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 animate-fade-in">
                 こんにちは、阿部竜弥です
-              </h1>
+              </h1> */}
               <h1 className="text-xl font-bold sm:text-2xl xl:text-4xl">
                 Hello, I&apos;m Tatsuya Abe
               </h1>

@@ -54,4 +54,4 @@ app/private/
 /.cursor
 
 # 自動デプロイ用のスクリプト
-.deploy.sh
+deploy.sh
